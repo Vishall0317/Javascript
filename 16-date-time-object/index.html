@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <!-- Date is a in built object allow us to get the local date time by 
+        accessing computer system clock through browser.
+        1. object is created with help of constructor -->
+
+    <script>
+
+        let date = new Date();
+        console.log(date);
+        console.log(date.toDateString());
+        console.log(date.toLocaleDateString());
+        console.log(date.toISOString());
+        console.log(date.toUTCString());
+        console.log(date.toString());
+        console.log(date.getDate());
+        console.log(date.getHours());
+        console.log(date.getDay());
+
+        let manualDate = new Date(2022, 12, 1, 12, 35, 45, 47);
+        console.log(manualDate);
+
+        let manualDate1 = new Date("30 January 2023");
+        console.log(manualDate1);
+
+        let manualDate2 = new Date(1576723400000);
+        console.log(manualDate2);
+
+        
+
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Selectors</title>
+
+    <script>
+        console.log("inside head");
+    </script>
+
+</head>
+<body>
+    <h1>DOM Selectors</h1>
+    <h2 id = "banner">Welecome to dom selectors</h2>
+
+    <h3 class = "myclass">selector by class1</h3>
+    <h3 class = "myclass">selector by class2</h3>
+    <h3 class = "myclass">selector by class3</h3>
+
+    <script>
+        console.log("inside body");
+
+        let html=document.documentElement;
+        let head=document.head;
+        let body=document.body;
+        let title=document.title;
+        console.log(html);
+        console.log(head);
+        console.log(body);
+        console.log(title);
+
+        /* 
+        select elements by id.
+        getElementById() return only one object.
+        */
+        let element1= document.getElementById("banner");
+        console.log(element1);
+
+        //element1.innerHTML = "change text";
+        element1.style.color = "blue";
+        element1.style.backgroundColor = "yellow";
+
+        /*
+        select elements by class.
+        getElementsByClassName() return array/collection.
+        */
+        let element2 = document.getElementsByClassName("myclass");
+        console.log(element2);   // return all elements in array
+        console.log(typeof element2);
+
+        for(let e2 of element2){     // return one by one element.
+            console.log(e2);    
+        }
+
+         /*
+        select elements by css selectors.
+            two functions - 
+                1. querySelector()  --- return single element.
+                2. querySelectorAll()  --- return all elements.
+        */
+
+        let element3 = document.querySelector(".myclass");
+        console.log(element3);
+        let element4 = document.querySelectorAll(".myclass");
+        console.log(element4);
+
+
+    </script>
+</body>
+</html>

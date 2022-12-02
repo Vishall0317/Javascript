@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bulb on/off project</title>
+
+    <style>
+        .bulb-container{
+            margin: 25px;
+            padding: 25px; 
+            width: 25px;
+            height: 25px;
+        }
+
+    </style>
+   
+</head>
+<body>
+    <h1>Control Bulb Switch</h1>
+    <button onclick="turnOn()">Turn ON</button>
+    <button onclick="turnOff()">Turn OFF</button>
+    <button id = "toggleButton" onclick="toggleBulb()">ON</button>
+
+    <div class = "bulb-container">
+        <img id = "bulb" src="off.png" width="250" height="350">
+    </div>
+
+    <script>
+        const turnOn = () =>{
+            let bulbOb = document.getElementById("bulb");
+            bulbOb.setAttribute("src", "on.png");
+        }
+
+        const turnOff = () =>{
+            let bulbOb = document.getElementById("bulb");
+            bulbOb.setAttribute("src", "off.png");
+        }
+
+        const toggleBulb = () =>{
+            let bulbOb = document.getElementById("bulb");
+            let srcValue = bulbOb.getAttribute("src");
+            console.log(srcValue);
+
+            let buttonOb = document.getElementById("toggleButton");
+            let textValue = buttonOb.innerHTML;
+            console.log(textValue);
+
+            if(srcValue=="on.png"){
+                turnOff();
+                buttonOb.innerHTML= "ON";
+            }else{
+                turnOn();
+                buttonOb.innerHTML= "OFF";
+            }
+
+        }
+    </script>
+    
+</body>
+</html>

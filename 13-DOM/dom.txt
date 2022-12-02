@@ -1,0 +1,27 @@
+DOM - Document object model
+
+1. platform and language independent model to represent the HTML or XML documents.
+2. it defines the logical structure of the documents and the way in which they
+    can be accessed and manipulated by an application program.
+3. In the DOM, all parts of the document, such as elements, attributes, text, etc are
+    organized in a hierarchical tree-like structure.
+4. In DOM terminology these individual parts of the document are known as nodes.
+
+---------------------------------------------------------------------------------------------
+
+JavaScript interacts with HTML document indirectly by interacting with the DOM.
+With the document object model, JavaScript gets all the power it needs to create dynamic HTML:
+    -JavaScript can change all the HTML elements in the page
+    -JavaScript can change all the HTML attributes in the page
+    -JavaScript can change all the CSS styles in the page
+    -JavaScript can remove existing HTML elements and attributes
+    -JavaScript can add new HTML elements and attributes
+    -JavaScript can react to all existing HTML events in the page
+    -JavaScript can create new HTML events in the page
+
+----------------------------------------------------------------------------------------------
+
+1. When an HTML document is loaded into a web browser, it becomes a document object.
+2. The document object is the root node of the HTML document.
+3. The document object is a property of the window object.
+4. The document object is accessed with: window.document or just document

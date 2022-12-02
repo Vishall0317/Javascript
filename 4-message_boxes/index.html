@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>hellow world!</h1>
+    <h2>welcome to javascript</h2>
+
+    <button>hey click me</button>
+
+    <script>
+
+        //alert
+        alert("hellow i am rocking....")
+
+        //prompt
+        let name = prompt("enter your name");
+        alert("hellow "+ name);
+
+        //confirm
+        let choice = confirm("want to open google.com ?");
+        //alert(choice);  ------ return true if u click on yes.
+        if(choice == true){
+            location.href = "https://www.google.com";
+        }else{
+            alert("not navigating to google");
+        }
+
+    </script>
+
+</body>
+</html>

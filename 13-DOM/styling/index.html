@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Styling</title>
+</head>
+<body>
+    <button onclick="changeStyle()">change style</button>
+
+    <button onclick="getStyle()">Get Information</button>
+
+    <h1 id = "main">Hellow world</h1>
+    <h2 id = "sub">Welecome to dom styling</h2>
+    <h3 id = "subsub">what is dom styling</h3>
+    <p>
+        Sets or returns the style of an element's border (can have up to four values) 
+        borderTop. Sets or returns all the borderTop properties in one declaration. 
+        borderTopColor. Sets or returns the color of the top border.
+    </p>
+
+    <script>
+        let mainOb = document.getElementById("main");
+        const changeStyle = () => {
+            mainOb.style.color ="blue";
+            mainOb.style.fontSize = "50px";
+            mainOb.style.border = "2px solid red";
+            mainOb.style.padding = "20px";
+            mainOb.style.background = "yellow";
+        };
+
+        const getStyle = () =>{
+            console.log(mainOb.style.color);
+            console.log(mainOb.style.fontSize);
+            console.log(mainOb.style.border);
+        };
+
+        let styles= window.getComputedStyle(mainOb);
+        console.log(styles.getPropertyValue("color"));
+    </script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Timer</title>
+</head>
+<body>
+    <h1>javascript timer</h1>
+
+    <button onclick="start()">start</button>
+    <button onclick="stop()">stop</button>
+
+    <script>
+        //setTimeout(functionName, time in mili sec) --- execute after a delay
+        //setInterval(functionName, time in mili sec) --- execute code at regular intervals
+        //clearInterval(time in mili sec) --- stop timer
+
+        //my code that i want to execute after 3 sec
+        const myCode =()=>{
+            console.log("hey, i am execute after 3 sec");
+        };
+
+        let timer;
+        const start=()=>{
+            //setTimeout(myCode, 3000);
+            timer = setInterval(myCode, 3000);
+            console.log(timer);
+        };
+
+        const stop=()=>{
+            clearInterval(timer);
+        };
+
+    </script>
+
+</body>
+</html>

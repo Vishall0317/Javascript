@@ -1,0 +1,36 @@
+Window Object -
+1. it represent browser window. a window object is supported by all browser.
+2. global variables are properties of the window object.
+3. global functions are methods of the window object.
+
+window object properties -
+1. alert() - Displays an alert box with a message and an OK button
+2. prompt() - Displays a dialog box that prompts the visitor for input
+3. print() - Prints the content of the current window
+4. open() - Opens a new browser window
+5. close()	- Closes the current window
+6. confirm() - Displays a dialog box with a message and an OK and a Cancel button
+7. resizeBy() - Resizes the window by the specified pixels
+8. resizeTo() - Resizes the window to the specified width and height
+9. moveBy() - Moves a window relative to its current position
+11. moveTo() - Moves a window to the specified position
+12. stop() - Stops the window from loading
+
+window object methods -
+1. document - Returns the Document object for the window.
+2. history - Returns the History object for the window.
+    history.back()
+    history.forward()
+    
+3. location - Returns the Location object for the window.
+    location.href - returns the url of the current page
+    location.hostname
+    location.pathname
+    location.protocol
+    location.assign() - loads a new document
+    location.port
+
+4. outerHeight - Returns the height of the browser window, including toolbars/scrollbars.
+5. outerWidth - Returns the width of the browser window, including toolbars/scrollbars.
+6. innerHeight - Returns the height of the window's content area (viewport) including scrollbars.
+7. innerWidth - Returns the width of a window's content area (viewport) including scrollbars.

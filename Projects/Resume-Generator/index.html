@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+
+    <title>Resume Generator</title>
+</head>
+
+<body>
+    <div id="cv-form" class="container">
+        <h1 class="text-center my-3">Resume Generator</h1>
+        <div>
+            <div class="row">
+                <!--first col-->
+                <div class="col-md-6">
+                    <h2>Personal Information</h2>
+                    <div class="mb-3">
+                        <label for="nameField">Your Name</label>
+                        <input type="name" class="form-control" id="nameField" placeholder="Enter here">
+                    </div>
+                    <div class="mb-3">
+                        <label for="emailField">Email address</label>
+                        <input type="email" class="form-control" id="emailField" placeholder="Enter here">
+                    </div>
+                    <div class="mb-3">
+                        <label for="phoneField">Contact Number</label>
+                        <input type="phone" class="form-control" id="phoneField" placeholder="Enter here">
+                    </div>
+                    <div class="mb-3">
+                        <label for="address" class="form-label">Your Address</label>
+                        <textarea class="form-control" id="address" rows="3" placeholder="Enter here"></textarea>
+                    </div>
+                    <div class="mt-3">
+                        <label for="photo">Select Your Photo</label>
+                        <input type="file" class="form-control" id="photoField" placeholder="Upload here">
+                    </div>
+
+                    <p class="text-secondary my-3">Important Links</p>
+                    <div class="mb-3">
+                        <label for="linkdinField">Linkdin</label>
+                        <input type="linkdin" class="form-control" id="linkdinField" placeholder="Enter here">
+                    </div>
+                    <div class="mb-3">
+                        <label for="githubField">Github</label>
+                        <input type="github" class="form-control" id="githubField" placeholder="Enter here">
+                    </div>
+                    <div class="mb-3">
+                        <label for="stackOverflowField">StackOverflow</label>
+                        <input type="stackOverflow" class="form-control" id="stackOverflowField"
+                            placeholder="Enter here">
+                    </div>
+                </div>
+
+                <!--second col-->
+                <div class="col-md-6">
+                    <h2>Professional Information</h2>
+                    <div class="mb-3">
+                        <label for="objectiveFiled" class="form-label">Objective</label>
+                        <textarea class="form-control" id="objective" rows="2" placeholder="Enter here"></textarea>
+                    </div>
+
+                    <!--Work Experience-->
+                    <div id="workExpAdd" class="mt-3">
+                        <label for="workExpField">Work Experience</label>
+                        <textarea class="form-control workExpField" id="workExp" rows="3" placeholder="Enter here"></textarea>
+                        <div id="workExpAddButton" class="container text-center mt-3">
+                            <button onclick="addWorkExpField()" class="btn btn-primary btn-sm">Add</button>
+                        </div>
+                    </div>
+
+                    <!--Academic Qualifications-->
+                    <div id="acadmicQuaAdd" class="mt-3">
+                        <label for="acadmicQuaField">Academic Qualifications</label>
+                        <textarea class="form-control acadmicQuaField" id="acadmicQua" rows="2" placeholder="Enter here"></textarea>
+                        <div id="aqAddButton" class="container text-center mt-3">
+                            <button onclick="addAcadmicQuaField()" class="btn btn-primary btn-sm">Add</button>
+                        </div>
+                    </div>
+
+                    <!--projects-->
+                    <div id="projectsAdd" class="mt-3">
+                        <label for="projectsFiled">Projects</label>
+                        <textarea class="form-control projectsFiled" rows="3" placeholder="Enter here"></textarea>
+                        <div id="projectsAddButton" class="container text-center mt-3">
+                            <button onclick="addProjectsFiled()" class="btn btn-primary btn-sm">Add</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!--generate cv-->
+                <div id="generateCVButton" class="container text-center mt-3">
+                    <button onclick="generateCV()" class="btn btn-primary btn-sm">Generate CV</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- cv template -->
+    <div class="conatiner" id="cv-template">
+        <div class="row">
+            <!-- first column -->
+            <div class="col-md-4 py-5">
+                <div class="text-center">
+                    <img src="person.jpg" class="rounded img-fluid myimg" alt="" id="photoT">
+                    <div class="container">
+                        <p id="nameT1">Vishal Bramhankar</p>
+                        <p id="phoneT">+91-8978909089</p>
+                        <p id="emailT">abc@gmail.com</p>
+                        <p id="addressT">Amgaon, Gindia, maharashtra, India, 441902</p>
+                        <hr />
+
+                        <p>
+                            <a id="linkdinT" href="https://www.linkdin.com"></a>
+                        </p>
+                        <p>
+                            <a id="githubT" href="https://www.github.com"></a>
+                        </p>
+                        <p>
+                            <a id="stackoverflowT" href="https://www.stackoverflow.com"></a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- second column -->
+            <div class="col-md-8 py-5">
+                <h1 id="nameT2" class="text-center" style="font-weight: 900">Vishal Bramhankar
+                </h1>
+
+                <!-- objective -->
+                <div class="card mt-3">
+                    <div class="card-header background">
+                        <h3>Objective</h3>
+                    </div>
+                    <div class="card-body">
+                        <p id="objectiveT">Analytical, Solution-oriented professional with 1+ years of extensive
+                            experience in Web Application Development. Exceptionally organized &
+                            focused, demonstrating & outstanding aptitude to manage & balance a
+                            variety of Applications in a fast-paced environment.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- work Experince -->
+                <div class="card mt-3">
+                    <div class="card-header background">
+                        <h3>Work Experience</h3>
+                    </div>
+                    <div>
+                        <ul id="workExpT" class="list-group list-group-flush">
+                            <li class="list-group-item">An item</li>
+                            <li class="list-group-item">A second item</li>
+                            <li class="list-group-item">A third item</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Academic Qualification-->
+                <div class="card mt-3">
+                    <div class="card-header background">
+                        <h3>Academic Qualification</h3>
+                    </div>
+                    <div>
+                        <ul id="academicQualT" class="list-group list-group-flush">
+                            <li class="list-group-item">An item</li>
+                            <li class="list-group-item">A second item</li>
+                            <li class="list-group-item">A third item</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- projects-->
+                <div class="card mt-3">
+                    <div class="card-header background">
+                        <h3>Projects</h3>
+                    </div>
+                    <div>
+                        <ul id="projectsT" class="list-group list-group-flush">
+                            <li class="list-group-item">An item</li>
+                            <li class="list-group-item">A second item</li>
+                            <li class="list-group-item">A third item</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--generate cv-->
+        <div id="printCVButton" class="container text-center mt-3">
+            <button onclick="printCV()" class="btn btn-primary btn-sm">Print CV</button>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous">
+        </script>
+    <script src="script.js"></script>
+</body>
+</html>
