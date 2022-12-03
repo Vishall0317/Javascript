@@ -1,0 +1,18 @@
+Class - 
+    1. ECMAScript 2015, also know as ES6, introduced javascript classes.
+    2. JS Classes are templates for JS Objects.
+    3. how to create class?
+        class ClassName{
+            //body
+        }
+
+Constructor - 
+    1. it has to have exact name "constructor".
+    2. it is executed automatically when a new object is created.
+    3. it is used to initialize object properties.
+    4. how to create? 
+        class ClassName{
+            constructor(){
+                //body
+            }
+        }

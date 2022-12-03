@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- onsubmit, onclick, onkeyup, onfocus is a event handler. -->
+    
+    <button onclick="myFun()">Click Me</button>
+    <input type="text" id="field" onfocus="changeColour()" onkeyup="updateText()">
+    <h1 id="textFeild">This is My Name</h1>
+
+    <form onsubmit="formSubmit(event)" action="text.html">
+        <button type="submit">Submit</button>
+    </form>
+
+    <button id="goLiveButt">Go Live</button>
+    
+    <script src="script.js"></script>
+</body>
+</html>

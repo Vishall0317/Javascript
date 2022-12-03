@@ -21,14 +21,14 @@
 
 */
 
-let ob ={
+let ob = {
     name: "vishal",
-    lastName:"bramhankar",
-    age:25,
-    city:"amgaon",
-    phone:"9089009878",
-    "programming skills":"c++, java, js",
-    display:function(){
+    lastName: "bramhankar",
+    age: 25,
+    city: "amgaon",
+    phone: "9089009878",
+    "programming skills": "c++, java, js",
+    display: function () {
         console.log("display properties");
         console.log(this.name);
         console.log(this.lastName);
@@ -46,16 +46,16 @@ ob.display();
 ob["display"]();
 
 console.log("all keys present in ob");
-for(let key in ob){
+for (let key in ob) {
     console.log(key);
 }
 
 console.log("---------------");
 //update/delete/insert values in object
-ob.name="raaja";
+ob.name = "raaja";
 console.log(ob.name);
 
-ob.email="raaja@email.com";
+ob.email = "raaja@email.com";
 console.log(ob.email);
 
 delete ob.city;
